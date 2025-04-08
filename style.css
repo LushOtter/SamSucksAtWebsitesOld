@@ -1,0 +1,147 @@
+body{
+    background-color: rgb(16, 16, 16);
+    color: rgb(78, 255, 78);
+    font-family: 'Courier New', Courier, monospace;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+button{
+    background-color: rgb(16, 16, 16);
+    color: rgb(78, 255, 78);
+    outline: 2.5px solid rgb(78, 255, 78);
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    transition: ease 0.3s;
+}
+button:hover{
+    background-color: rgb(78, 255, 78);
+    color: rgb(16, 16, 16);
+    border-color: rgb(16, 16, 16);
+    scale: 1.2;
+    outline: 2.5px solid rgb(16, 16, 16);
+    font-weight: bolder;
+    cursor: pointer;
+}
+.navbar{
+    background-color: rgb(25, 25, 25);
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.block{
+    background-color: rgb(25, 25, 25);
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+.socialscontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* spacing between buttons */
+    max-width: 1000px; /* optional: controls total width */
+    margin: 0 auto;
+}
+
+/* Ensure buttons take up ~20% width for 5 per row */
+.socialscontainer button {
+    flex: 1 1 calc(20% - 10px); /* 20% minus gap */
+    box-sizing: border-box;
+    min-width: 150px; /* prevents buttons from getting too small on narrow screens */
+}
+img{
+    height: 64px;
+    width: auto;
+}
+.imagewrapper{
+    text-align: center;
+}
+.redbutton {
+    color: #f4a1a1;
+    outline-color: #f4a1a1;
+}
+.redbutton:hover {
+    background-color: #f4a1a1;
+    color: rgb(16, 16, 16);
+}
+.orangebutton {
+    color: #f7c39b;
+    outline-color: #f7c39b;
+}
+.orangebutton:hover {
+    background-color: #f7c39b;
+    color: rgb(16, 16, 16);
+}
+.yellowbutton {
+    color: #fdf7a4;
+    outline-color: #fdf7a4;
+}
+.yellowbutton:hover {
+    background-color: #fdf7a4;
+    color: rgb(16, 16, 16);
+}
+.greenbutton {
+    color: #b6eac6;
+    outline-color: #b6eac6;
+}
+.greenbutton:hover {
+    background-color: #b6eac6;
+    color: rgb(16, 16, 16);
+}
+.bluebutton {
+    color: #a3d8f4;
+    outline-color: #a3d8f4;
+}
+.bluebutton:hover {
+    background-color: #a3d8f4;
+    color: rgb(16, 16, 16);
+}
+.purplebutton {
+    color: #d4a9f9;
+    outline-color: #d4a9f9;
+}
+.purplebutton:hover {
+    background-color: #d4a9f9;
+    color: rgb(16, 16, 16);
+}
+.blackbutton {
+    color: #8e8e8e;
+    outline-color: #8e8e8e;
+}
+.blackbutton:hover {
+    background-color: #8e8e8e;
+    color: white;
+}
+.whitebutton {
+    color: #f5f5f5;
+    outline-color: #f5f5f5;
+}
+.whitebutton:hover {
+    background-color: #f5f5f5;
+    color: black;
+}
+.pinkbutton {
+    color: #f7b8d4;
+    outline-color: #f7b8d4;
+}
+.pinkbutton:hover {
+    background-color: #f7b8d4;
+    color: rgb(16, 16, 16);
+}
+.greybutton {
+    color: #d3d3d3;
+    outline-color: #d3d3d3;
+}
+.greybutton:hover {
+    background-color: #d3d3d3;
+    color: rgb(16, 16, 16);
+}
