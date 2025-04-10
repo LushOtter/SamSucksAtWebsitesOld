@@ -1,68 +1,123 @@
-body{
-    background-color: rgb(16, 16, 16);
-    color: rgb(78, 255, 78);
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-image: url('./images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #d9b3ff;
     font-family: 'Courier New', Courier, monospace;
     user-select: none;
+    text-align: center;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
 }
-button{
-    background-color: rgb(16, 16, 16);
-    color: rgb(78, 255, 78);
-    outline: 2.5px solid rgb(78, 255, 78);
+button {
+    background-color: rgb(32, 32, 64);
+    color: #d9b3ff;
+    outline: 2.5px solid #d9b3ff;
     border-radius: 10px;
     border: none;
     padding: 10px 20px;
     font-family: 'Courier New', Courier, monospace;
     transition: ease 0.3s;
 }
-button:hover{
-    background-color: rgb(78, 255, 78);
-    color: rgb(16, 16, 16);
-    border-color: rgb(16, 16, 16);
-    scale: 1.2;
-    outline: 2.5px solid rgb(16, 16, 16);
+button:hover {
+    background-color: #d9b3ff;
+    color: rgb(32, 32, 64);
+    border-color: rgb(32, 32, 64);
+    transform: scale(1.2);
+    outline: 2.5px solid rgb(32, 32, 64);
     font-weight: bolder;
     cursor: pointer;
 }
-.navbar{
-    background-color: rgb(25, 25, 25);
+.navbar {
+    background-color: rgba(25, 25, 25, 0.7);
     border-radius: 15px;
     padding: 10px 15px;
-    margin: 0 auto;
-    margin-bottom: 5px;
+    margin: 0 auto 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    backdrop-filter: blur(5px);
+    gap: 10px;
 }
-.block{
-    background-color: rgb(25, 25, 25);
+.navbar > h3 {
+    flex: 1;
+    text-align: left;
+}
+.navbar > .buttons {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+#batteryStatus {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+}
+#batteryIcon {
+    font-size: 24px;
+    margin-right: 5px;
+}
+#batteryPercentage {
+    font-size: 16px;
+}
+#clock {
+    margin-left: 10px;
+    font-size: 16px;
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+    .navbar > h3,
+    .navbar > .buttons,
+    #batteryStatus {
+        flex: unset;
+        width: 100%;
+        justify-content: center;
+    }
+    #batteryStatus {
+        justify-content: center;
+        margin-top: 5px;
+    }
+}
+.block {
+    background-color: rgba(25, 25, 25, 0.7);
     border-radius: 15px;
     padding: 10px 15px;
     margin: 0 auto;
     margin-bottom: 5px;
+    backdrop-filter: blur(5px);
 }
 .socialscontainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px; /* spacing between buttons */
-    max-width: 1000px; /* optional: controls total width */
+    gap: 10px;
+    max-width: 1000px;
     margin: 0 auto;
 }
-
-/* Ensure buttons take up ~20% width for 5 per row */
 .socialscontainer button {
-    flex: 1 1 calc(20% - 10px); /* 20% minus gap */
+    flex: 1 1 calc(20% - 10px);
     box-sizing: border-box;
-    min-width: 150px; /* prevents buttons from getting too small on narrow screens */
+    min-width: 150px;
 }
-img{
+img {
     height: 64px;
     width: auto;
 }
-.imagewrapper{
+.imagewrapper {
     text-align: center;
 }
 .redbutton {
@@ -71,7 +126,7 @@ img{
 }
 .redbutton:hover {
     background-color: #f4a1a1;
-    color: rgb(16, 16, 16);
+    color: rgb(32, 32, 64);
 }
 .orangebutton {
     color: #f7c39b;
@@ -79,7 +134,7 @@ img{
 }
 .orangebutton:hover {
     background-color: #f7c39b;
-    color: rgb(16, 16, 16);
+    color: rgb(32, 32, 64);
 }
 .yellowbutton {
     color: #fdf7a4;
@@ -87,7 +142,7 @@ img{
 }
 .yellowbutton:hover {
     background-color: #fdf7a4;
-    color: rgb(16, 16, 16);
+    color: rgb(32, 32, 64);
 }
 .greenbutton {
     color: #b6eac6;
@@ -103,7 +158,7 @@ img{
 }
 .bluebutton:hover {
     background-color: #a3d8f4;
-    color: rgb(16, 16, 16);
+    color: rgb(32, 32, 64);
 }
 .purplebutton {
     color: #d4a9f9;
@@ -111,7 +166,7 @@ img{
 }
 .purplebutton:hover {
     background-color: #d4a9f9;
-    color: rgb(16, 16, 16);
+    color: rgb(32, 32, 64);
 }
 .blackbutton {
     color: #8e8e8e;
@@ -135,7 +190,7 @@ img{
 }
 .pinkbutton:hover {
     background-color: #f7b8d4;
-    color: rgb(16, 16, 16);
+    color: rgb(32, 32, 64);
 }
 .greybutton {
     color: #d3d3d3;
@@ -143,5 +198,95 @@ img{
 }
 .greybutton:hover {
     background-color: #d3d3d3;
-    color: rgb(16, 16, 16);
+    color: rgb(32, 32, 64);
+}
+.imagewrapper {
+    text-align: center;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+.tech-icon {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+.tech-icon:hover {
+    transform: scale(1.1);
+}
+.tech-stack {
+    font-size: 1.2rem;
+    color: #d9b3ff;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+}
+a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #a3d8f4;
+}
+a:hover{
+    text-decoration: underline;
+}
+em {
+    font-weight: 800;
+    background: linear-gradient(
+      270deg,
+      #5bcffa,
+      #f7a8b8,
+      #ffffff,
+      #f7a8b8,
+      #5bcffa
+    );
+    background-size: 1000% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: transFemFlow 10s ease infinite;
+  }
+  @keyframes transFemFlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+.discord-status {
+    margin: 0 auto;
+    background: #1e1e1e;
+    color: #fff;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+    max-width: 300px;
+}
+.discord-status .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #444;
+}
+.discord-status .info {
+    display: flex;
+    flex-direction: column;
+}
+.discord-status .status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    transform: translateY(1px);
 }

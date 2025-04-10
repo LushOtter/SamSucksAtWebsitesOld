@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>Sam - Core</title>
+    </head>
+    <body>
+        <div class="navbar">
+            <h3>Sam - Core</h3>
+            <div class="buttons">
+                <button onclick="window.location.href='./index.html'">Home</button>
+                <button onclick="window.location.href='./projects.html'">Projects</button>
+            </div>
+            <div id="batteryStatus">
+                <i class="material-icons" id="batteryIcon">battery_alert</i>
+                <span id="batteryPercentage">Loading...</span>
+                <span id="clock">Loading Time...</span>
+            </div>
+        </div>
+        <div class="block">
+            <h3>My <em>Public</em> GitHub Repos</h3>
+            <p>I'm too lazy to use commmand line <em>sometimes</em></p>
+            <ul id="repo-list"></ul>
+        </div>
+        <div class="block">
+            <h3>Footer</h3>
+            <p>You have reached the end of this page, if you wish to connect or reach out to me, add me on discord, or tweet me!</p>
+        </div>
+        <script src="./Repos.js"></script>
+        <script src="./Battery.js"></script>
+    </body>
+</html>
